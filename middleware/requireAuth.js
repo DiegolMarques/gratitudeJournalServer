@@ -22,8 +22,8 @@ async function requireAuth(req, res, next) {
     // continue on
     next();
   } catch (err) {
+    console.log('haha ur dumb');
     return res.sendStatus(401);
-    console.log('haha ur dumb')
   }
 }
 
