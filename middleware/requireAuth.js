@@ -7,7 +7,7 @@ async function requireAuth(req, res, next) {
     const token = req.cookies.Authorization;
 
     // Decode the token
-    const decoded = jwt.verify(token, process.env.SECRET);
+    const decoded = jwt.verify(token, 'RANDOM');
 
     // Check expiration
     if (Date.now() > decoded.exp) return res.sendStatus(401);
